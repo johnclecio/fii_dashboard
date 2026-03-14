@@ -253,3 +253,6 @@
 /Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/johnlima/Documents/Python/fii_dashboard/main.py': [Errno 1] Operation not permitted
 /Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/johnlima/Documents/Python/fii_dashboard/main.py': [Errno 1] Operation not permitted
 /Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/johnlima/Documents/Python/fii_dashboard/main.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/johnlima/Documents/Python/fii_dashboard/main.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/johnlima/Documents/Python/fii_dashboard/main.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/johnlima/Documents/Python/fii_dashboard/main.py': [Errno 1] Operation not permitted
