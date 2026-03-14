@@ -1,46 +1,32 @@
 import streamlit as st
-import yfinance as yf
-import pandas as pd
 import json
+
+from dados import buscar_dados
 
 st.title("📊 Dashboard de FIIs")
 
+# carregar carteira
 with open("carteira.json") as f:
     carteira = json.load(f)
 
-dados = []
+# buscar dados
+df = buscar_dados(carteira)
 
-for ticker, cotas in carteira.items():
+# calcular valor investido
+df["Valor Investido"] = df["Preço"] * df["Cotas"]
 
-    ativo = yf.Ticker(ticker + ".SA")
-
-    hist = ativo.history(period="1mo")
-
-    preco = hist["Close"].iloc[-1]
-
-    div = ativo.dividends.tail(1)
-
-    if len(div) > 0:
-        dividendo = div.iloc[0]
-    else:
-        dividendo = 0
-
-    renda = dividendo * cotas
-
-    dados.append({
-        "FII": ticker,
-        "Preço": preco,
-        "Cotas": cotas,
-        "Dividendo": dividendo,
-        "Renda Mensal": renda
-    })
-
-df = pd.DataFrame(dados)
-
-st.dataframe(df)
-
+# totais
+total_investido = df["Valor Investido"].sum()
 renda_total = df["Renda Mensal"].sum()
 
-st.metric("💰 Renda mensal estimada", f"R$ {renda_total:.2f}")
+# métricas
+col1, col2 = st.columns(2)
 
-st.bar_chart(df.set_index("FII")["Renda Mensal"])
+col1.metric("💰 Total Investido", f"R$ {total_investido:,.2f}")
+col2.metric("💵 Renda Mensal", f"R$ {renda_total:,.2f}")
+
+# tabela
+st.dataframe(df)
+
+# gráfico
+st.bar_chart(df.set_index("Ticker")["Renda Mensal"])
