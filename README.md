@@ -116,12 +116,12 @@ http://localhost:8501
 # 📊 Exemplo de saída
 
 ```
-Ticker   Preço   Cotas   Dividendo   Renda Mensal
-HGLG11   156.83    10      1.10          11.00
-MXRF11     9.70   100      0.10          10.00
-VGIR11     9.73    80      0.12           9.60
-LVBI11   110.55    15      0.75          11.25
-XPML11   109.30    12      0.92          11.04
+            Ticker   Preço   Cotas   Dividendo   Renda Mensal
+            HGLG11   156.83    10      1.10          11.00
+            MXRF11     9.70   100      0.10          10.00
+            VGIR11     9.73    80      0.12           9.60
+            LVBI11   110.55    15      0.75          11.25
+            XPML11   109.30    12      0.92          11.04
 
 Renda mensal estimada: R$ 52.89
 ```
