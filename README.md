@@ -16,6 +16,15 @@ O projeto utiliza Python para coleta e processamento de dados e um dashboard web
 
 ---
 
+# 💡 Diferenciais
+
+* Dashboard simples e intuitivo
+* Dados atualizados automaticamente via API (yfinance)
+* Estrutura modular (boas práticas em Python)
+* Projeto escalável para novas funcionalidades
+
+---
+
 # 🛠 Tecnologias utilizadas
 
 * Python
@@ -28,55 +37,62 @@ O projeto utiliza Python para coleta e processamento de dados e um dashboard web
 # 📂 Estrutura do projeto
 
 ```
-fii_dashboard
-│
-├── dashboard.py      # Interface web com Streamlit
-├── main.py           # Script principal de cálculo da carteira
-├── carteira.json     # Dados da carteira de FIIs
-├── log.txt           # Logs de execução
-└── README.md
+        fii_dashboard
+        │
+        ├── dashboard.py        # Interface web com Streamlit
+        ├── main.py             # Script principal de cálculo da carteira
+        ├── dados.py            # Coleta de dados dos FIIs
+        ├── graficos.py         # Geração de gráficos
+        ├── simulador.py        # Simulação de investimentos
+        ├── carteira.json       # Dados da carteira
+        ├── requirements.txt    # Dependências do projeto
+        └── README.md
 ```
+
+---
+
+# 📋 Pré-requisitos
+
+Antes de iniciar, certifique-se de ter os seguintes itens instalados:
+
+* Python 3.9+
+* pip
+* Git
+* Ambiente virtual (venv) recomendado   
 
 ---
 
 # ⚙️ Instalação
 
-Clone o repositório:
 
-```
-git clone https://github.com/seu-usuario/fii_dashboard.git
-```
 
-Entre na pasta do projeto:
+# 📥 Clonar o repositório
 
-```
-cd fii_dashboard
-```
+git clone https://github.com/johnclecio/fii_dashboard.git
 
-Crie um ambiente virtual:
+ cd fii_dashboard
 
-```
-python3 -m venv venv
-```
+---
 
-Ative o ambiente virtual:
+# 🐍 Criar ambiente virtual
 
-Mac / Linux
+ python3 -m venv venv
 
-```
-source venv/bin/activate
-```
+---
 
-Windows
+# ▶️ Ativar ambiente virtual
 
-```
+ Mac / Linux:
+ source venv/bin/activate
+
+Windows:
 venv\Scripts\activate
-```
 
-Instale as dependências:
+---
 
-```
-pip install streamlit pandas yfinance
+# 📦 Instalar dependências
+
+pip install -r requirements.txt
 ```
 
 ---
@@ -112,15 +128,7 @@ Renda mensal estimada: R$ 52.89
 
 ---
 
-# 📈 Melhorias futuras
 
-* Gráfico de evolução da renda passiva
-* Histórico de dividendos
-* Valor total da carteira
-* Simulação de reinvestimento de dividendos
-* Integração com APIs de mercado
-
----
 
 # 📄 Licença
 
